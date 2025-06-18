@@ -1,17 +1,16 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar.tsx"
+import SideBarProyectopolis from "./SideBar/SideBarProyectopolis";
 
-export default function InSessionLayout({ children }: { children: React.ReactNode }){ 
+export default function InSessionLayout(){ 
     
     
 
     return(
         <>
             <SidebarProvider>
-                <AppSidebar/>
+                <SideBarProyectopolis />
                 <main>
                     <SidebarTrigger /> 
-                    {children}
                 </main>
             </SidebarProvider>
         </>
