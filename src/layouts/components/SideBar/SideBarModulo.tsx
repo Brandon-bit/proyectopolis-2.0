@@ -13,7 +13,7 @@ export default function SideBarModulo({modulo} : {modulo : SideBarModuloProps}){
             }
 
             {/* Apartados */}
-            <div className="mb-4">
+            <div className="mb-3">
                 {modulo.menus.map((menu) => (
                     <SideBarMenu menu={menu} key={menu.dni}/>
                 ))}
