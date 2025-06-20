@@ -1,5 +1,5 @@
 
-import InSessionLayout from '../layouts/components/InSessionLayout'
+import InSessionLayout from './layouts/components/InSessionLayout'
 
 function App() {
 

@@ -1,5 +1,5 @@
-import logo from '@/assets/logotipo.png';
-import favicon from '@/assets/favicon.ico';
+import logo from '@/assets/images/logotipo.png';
+import favicon from '@/assets/icons/favicon.ico';
 
 // SideBar
 import {
