@@ -12,28 +12,8 @@ import {
   useSidebar
 } from "@/components/ui/sidebar";
 
-// Tooltip
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
-
-// DropdownMenu
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuPortal
-} from "@/components/ui/dropdown-menu"
-
 import SideBarModulo from './SideBarModulo';
+import SideBarDropdown from './SideBarDropdown';
 
 const sideBarData = [
     {
@@ -489,7 +469,7 @@ export default function AppSidebar() {
   
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant='inset'>
       {/* Header */}
       <SidebarHeader>
         <SidebarMenu>
@@ -514,36 +494,7 @@ export default function AppSidebar() {
         ) : (
             <ul className='mx-3.5'>
                 {sideBarData.map((m) => (
-                    <li className='mb-3'>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger>
-                                <Tooltip>
-                                    <TooltipTrigger><i className={`${m.icono} mr-2 text-[1rem]`}></i></TooltipTrigger>
-                                    <TooltipContent side="right">
-                                        <p>{m.titulo}</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </DropdownMenuTrigger>
-
-                            <DropdownMenuContent side="right" align="start">
-                                <DropdownMenuLabel>{m.titulo}</DropdownMenuLabel>
-                                <DropdownMenuSeparator />
-                                {m.menus.map((sm) => (
-                                    <DropdownMenuSub>
-                                        <DropdownMenuSubTrigger>{sm.titulo}</DropdownMenuSubTrigger>
-                                        <DropdownMenuPortal>
-                                            <DropdownMenuSubContent>
-                                                {sm.vistas.map((v) => (
-                                                    <DropdownMenuItem>{v.nombre}</DropdownMenuItem>
-                                                ))}
-                                            </DropdownMenuSubContent>
-                                        </DropdownMenuPortal>
-                                    </DropdownMenuSub>
-                                ))}
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                        
-                    </li>
+                    <SideBarDropdown modulo={m}/>
                 ))}
             </ul>
         )}
