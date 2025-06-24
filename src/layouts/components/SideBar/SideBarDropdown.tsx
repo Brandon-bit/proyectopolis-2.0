@@ -32,7 +32,7 @@ export default function SideBarDropdown({modulo} : {modulo : SideBarModuloProps}
                             <Button asChild variant="ghost" className="p-2 flex justify-center opacity-50 hover:opacity-100 hover:cursor-pointer">
                                 <DropdownMenuTrigger className="flex justify-center">
                                     <Tooltip>
-                                        <TooltipTrigger><i className={`${modulo.icono} text-[1rem] hover:cursor-pointer`}></i></TooltipTrigger>
+                                        <TooltipTrigger asChild><i className={`${modulo.icono} text-[1rem] hover:cursor-pointer`}></i></TooltipTrigger>
                                         <TooltipContent side="right">
                                             <p>{modulo.titulo}</p>
                                         </TooltipContent>
@@ -45,12 +45,12 @@ export default function SideBarDropdown({modulo} : {modulo : SideBarModuloProps}
                                 <DropdownMenuLabel>{modulo.titulo}</DropdownMenuLabel>
                                 <DropdownMenuSeparator />
                                 {modulo.menus.map((sm) => (
-                                    <DropdownMenuSub>
+                                    <DropdownMenuSub key={sm.dni}>
                                         <DropdownMenuSubTrigger>{sm.titulo}</DropdownMenuSubTrigger>
                                         <DropdownMenuPortal>
                                             <DropdownMenuSubContent>
                                                 {sm.vistas.map((v) => (
-                                                    <DropdownMenuItem asChild>
+                                                    <DropdownMenuItem asChild key={v.nombre}>
                                                         <Link to={v.link}>{v.nombre}</Link>
                                                     </DropdownMenuItem>
                                                 ))}

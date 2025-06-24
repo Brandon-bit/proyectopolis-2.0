@@ -499,7 +499,7 @@ export default function AppSidebar() {
         ) : (
             <ul className='flex flex-col justify-center items-center'>
                 {sideBarData.map((m) => (
-                    <SideBarDropdown modulo={m}/>
+                    <SideBarDropdown modulo={m} key={m.dni}/>
                 ))}
             </ul>
         )}
