@@ -190,15 +190,31 @@ const sideBarData = [
                     },
                     {
                         nombre: "Diagrama de Proceso",
-                        link: "proceso/diagramadeproceso"
+                        link: "/proceso/diagramadeproceso"
                     },
                     {
                         nombre: "Implementación de Olas",
-                        link: "proceso/implementaciondeolas"
+                        link: "/proceso/implementaciondeolas"
                     },
                     {
                         nombre: "Matriz de VoBo",
                         link: "proceso/matrizvobo"
+                    },
+                    {
+                        nombre: "Metodología de Procesos",
+                        link: "proceso/metodologia"
+                    },
+                    {
+                        nombre: "Matriz Reducción de Tiempos (AsIs – ToBe)",
+                        link: "proceso/reducciontiempos"
+                    },
+                    {
+                        nombre: "RASCI",
+                        link: "proceso/rasci"
+                    },
+                    {
+                        nombre: "Tiempos y Movimientos",
+                        link: "proceso/tiemposmovimientos"
                     }
                 ]
             },
@@ -208,12 +224,12 @@ const sideBarData = [
                 titulo: "Manuales y Políticas",
                 vistas: [
                     {
-                        nombre: "Nueva",
-                        link: "#"
+                        nombre: "Almacenamiento de Manuales y Políticas",
+                        link: "/manualespoliticas"
                     },
                     {
-                        nombre: "Lista",
-                        link: "#"
+                        nombre: "Configuración",
+                        link: "/manualespoliticas/configuracion"
                     }
                 ]
             },
@@ -223,12 +239,16 @@ const sideBarData = [
                 titulo: "Administración del Cambio",
                 vistas: [
                     {
-                        nombre: "Nueva",
-                        link: "#"
+                        nombre: "Generación y Gestión Encuestas",
+                        link: "/admoncambio/encuestas"
                     },
                     {
-                        nombre: "Lista",
-                        link: "#"
+                        nombre: "Documentos de Capacitación",
+                        link: "/admoncambio/capacitacion"
+                    },
+                    {
+                        nombre: "Generación y Gestión de Exámenes",
+                        link: "/admoncambio/examenes"
                     }
                 ]
             }
