@@ -1,12 +1,15 @@
+import { HashRouter, BrowserRouter, Routes } from "react-router-dom";
+import routes from "./routes/routes";
 
-import InSessionLayout from './layouts/components/InSessionLayout'
 
 function App() {
 
   return (
-    <>
-      <InSessionLayout/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        {routes}
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -19,21 +19,27 @@ import {
   DropdownMenuPortal
 } from "@/components/ui/dropdown-menu"
 
+import { Link } from "react-router-dom";
+
 import type { SideBarModuloProps } from "@/layouts/types/SideBarModulo";
+import { Button } from "@/components/ui/button";
 
 export default function SideBarDropdown({modulo} : {modulo : SideBarModuloProps}){
     return(
         <>
             <li className='mb-3'>
                         <DropdownMenu>
-                            <DropdownMenuTrigger>
-                                <Tooltip>
-                                    <TooltipTrigger><i className={`${modulo.icono} mr-2 text-[1rem]`}></i></TooltipTrigger>
-                                    <TooltipContent side="right">
-                                        <p>{modulo.titulo}</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </DropdownMenuTrigger>
+                            <Button asChild variant="ghost" className="p-2 flex justify-center opacity-50 hover:opacity-100 hover:cursor-pointer">
+                                <DropdownMenuTrigger className="flex justify-center">
+                                    <Tooltip>
+                                        <TooltipTrigger><i className={`${modulo.icono} text-[1rem] hover:cursor-pointer`}></i></TooltipTrigger>
+                                        <TooltipContent side="right">
+                                            <p>{modulo.titulo}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </DropdownMenuTrigger>
+                            </Button>
+                            
 
                             <DropdownMenuContent side="right" align="start">
                                 <DropdownMenuLabel>{modulo.titulo}</DropdownMenuLabel>
@@ -44,7 +50,9 @@ export default function SideBarDropdown({modulo} : {modulo : SideBarModuloProps}
                                         <DropdownMenuPortal>
                                             <DropdownMenuSubContent>
                                                 {sm.vistas.map((v) => (
-                                                    <DropdownMenuItem>{v.nombre}</DropdownMenuItem>
+                                                    <DropdownMenuItem asChild>
+                                                        <Link to={v.link}>{v.nombre}</Link>
+                                                    </DropdownMenuItem>
                                                 ))}
                                             </DropdownMenuSubContent>
                                         </DropdownMenuPortal>

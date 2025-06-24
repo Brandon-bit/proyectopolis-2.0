@@ -138,3 +138,11 @@
   font-weight: 700;
   font-style: normal;
 }
+
+h2{
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--text-2xl) /* 1.5rem = 24px */;
+  line-height: var(--tw-leading, var(--text-2xl--line-height) /* calc(2 / 1.5) ≈ 1.3333 */);
+}

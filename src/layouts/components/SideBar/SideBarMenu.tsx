@@ -1,6 +1,6 @@
 import type { SideBarMenuProps } from "@/layouts/types/SideBarMenu";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 // import {
 //   Accordion,
 //   AccordionContent,
@@ -29,9 +29,9 @@ export default function SideBarMenu({menu} : {menu : SideBarMenuProps}){
 
             <ul className={`origin-top bg-white text-black rounded transition-all duration-200 ease-in-out overflow-hidden' ${ulClasses}`}>
                 {menu.vistas.map((v) => (
-                    <a href={v.link}>
+                    <Link to={v.link}>
                         <li className="hover:bg-blue-50 p-1 m-2 rounded">{v.nombre}</li>
-                    </a>
+                    </Link>
                 ))}
             </ul>
         </>

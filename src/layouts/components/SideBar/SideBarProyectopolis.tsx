@@ -14,6 +14,7 @@ import {
 
 import SideBarModulo from './SideBarModulo';
 import SideBarDropdown from './SideBarDropdown';
+import { Link } from "react-router-dom";
 
 const sideBarData = [
     {
@@ -184,16 +185,20 @@ const sideBarData = [
                 titulo: "Procesos de Negocio",
                 vistas: [
                     {
-                        nombre: "Opciones",
-                        link: "#"
+                        nombre: "Cadenas de Valor",
+                        link: "/proceso/cadenasdevalor"
                     },
                     {
-                        nombre: "Menú",
-                        link: "#"
+                        nombre: "Diagrama de Proceso",
+                        link: "proceso/diagramadeproceso"
                     },
                     {
-                        nombre: "Codigos Promocionales",
-                        link: "#"
+                        nombre: "Implementación de Olas",
+                        link: "proceso/implementaciondeolas"
+                    },
+                    {
+                        nombre: "Matriz de VoBo",
+                        link: "proceso/matrizvobo"
                     }
                 ]
             },
@@ -474,10 +479,10 @@ export default function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild>
-              <a href="#">
+            <SidebarMenuButton asChild className='flex justify-center'>
+              <Link to="/">
                 <img src={showLogo}/>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -492,7 +497,7 @@ export default function AppSidebar() {
                 ))}
             </ul>
         ) : (
-            <ul className='mx-3.5'>
+            <ul className='flex flex-col justify-center items-center'>
                 {sideBarData.map((m) => (
                     <SideBarDropdown modulo={m}/>
                 ))}

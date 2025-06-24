@@ -14,17 +14,18 @@ import { Button } from "@/components/ui/button";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function NavBar(){
+
     return(
         <>
             <div className="px-3 py-2 flex items-center justify-between">
                 <div className="flex items-center">
-                    <SidebarTrigger /> 
+                    <SidebarTrigger className="opacity-50 hover:opacity-100"/> 
                     <Separator 
                         orientation="vertical" 
                         className="mx-2 data-[orientation=vertical]:h-9" 
                     />
                     <div className="text-sm flex justify-between">
-                        <Button variant="ghost" asChild >
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#" className="p-5">
                                 <div className="text-center">
                                     <i className="fas fa-file-export"></i>
@@ -33,7 +34,7 @@ export default function NavBar(){
                             </a>
                         </Button>
                         
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-tasks "></i>
@@ -42,7 +43,7 @@ export default function NavBar(){
                             </a>
                         </Button>
 
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-tachometer-alt"></i>
@@ -51,7 +52,7 @@ export default function NavBar(){
                             </a>
                         </Button>
 
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-search"></i>
@@ -59,7 +60,7 @@ export default function NavBar(){
                                 </div>
                             </a>
                         </Button>
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-map-marked"></i>
@@ -67,7 +68,7 @@ export default function NavBar(){
                                 </div>
                             </a>
                         </Button>
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-calendar"></i>
@@ -75,7 +76,7 @@ export default function NavBar(){
                                 </div>
                             </a>
                         </Button>
-                        <Button variant="ghost" asChild>
+                        <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                             <a href="#">
                                 <div className="text-center">
                                     <i className="fas fa-graduation-cap"></i>
@@ -84,9 +85,10 @@ export default function NavBar(){
                             </a>
                         </Button>
                     </div>
+                    
                 </div>
                 <div className="flex items-center">
-                    <Button variant="ghost" asChild>
+                    <Button variant="ghost" asChild className="opacity-50 hover:opacity-100">
                         <a href="#">
                             <div className="text-center">
                                 <i className="fas fa-question"></i>
@@ -99,7 +101,7 @@ export default function NavBar(){
                         className="mx-2 data-[orientation=vertical]:h-9" 
                     />
                     <DropdownMenu>
-                        <Button asChild variant="ghost" className="hover:cursor-pointer">
+                        <Button asChild variant="ghost" className="hover:cursor-pointer opacity-50 hover:opacity-100">
                             <DropdownMenuTrigger className="flex items-center text-xs">
                                 <p className="mr-2">Brandon Juarez</p>
                                 <i className="fas fa-laugh-wink"></i>
