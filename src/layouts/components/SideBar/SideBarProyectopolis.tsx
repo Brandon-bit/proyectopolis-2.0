@@ -215,6 +215,10 @@ const sideBarData = [
                     {
                         nombre: "Tiempos y Movimientos",
                         link: "proceso/tiemposmovimientos"
+                    },
+                    {
+                        nombre: "Procedimientos",
+                        link: "proceso/procedimientos"
                     }
                 ]
             },

@@ -8,11 +8,12 @@ import MetodologiaDeProcesos from "@/modules/MejoraContinuaPlus/Procesos/Metodol
 import MatrizReduccionDeTiempos from "@/modules/MejoraContinuaPlus/Procesos/MatrizReduccionDeTiempos";
 import Rasci from "@/modules/MejoraContinuaPlus/Procesos/Rasci";
 import TiemposMovimientos from "@/modules/MejoraContinuaPlus/Procesos/TiemposMovimientos";  
-import Encuestas from "@/modules/MejoraContinuaPlus/AdministracionDelCambio/encuestas";
+import Encuestas from "@/modules/MejoraContinuaPlus/AdministracionDelCambio/Encuestas";
 import DocumentosDeCapacitacion from "@/modules/MejoraContinuaPlus/AdministracionDelCambio/DocumentosDeCapacitacion";
 import Examenes from "@/modules/MejoraContinuaPlus/AdministracionDelCambio/Examenes";
-import Almacenamiento from "@/modules/MejoraContinuaPlus/ManualesPoliticas/almacenamiento";
-import Configuracion from "@/modules/MejoraContinuaPlus/ManualesPoliticas/configuracion";
+import Almacenamiento from "@/modules/MejoraContinuaPlus/ManualesPoliticas/Almacenamiento";
+import Configuracion from "@/modules/MejoraContinuaPlus/ManualesPoliticas/Configuracion";
+import Procedimientos from "@/modules/MejoraContinuaPlus/Procesos/Procedimientos";
 
 export const mejoraContinuaPlusRoutes : RouteObject[] = [
 // PROCESOS
@@ -24,6 +25,8 @@ export const mejoraContinuaPlusRoutes : RouteObject[] = [
   { path: "/proceso/reducciontiempos", element: <MatrizReduccionDeTiempos /> },
   { path: "/proceso/rasci", element: <Rasci /> },
   { path: "/proceso/tiemposmovimientos", element: <TiemposMovimientos /> },
+  { path: "/proceso/tiemposmovimientos", element: <TiemposMovimientos /> },
+  { path: "/proceso/procedimientos", element: <Procedimientos /> },
 
 // MANUALES Y POLITICAS
   { path: "/manualespoliticas", element: <Almacenamiento /> },
